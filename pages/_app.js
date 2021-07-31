@@ -1,7 +1,9 @@
-import '../globals.css';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
 
+import '../globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
