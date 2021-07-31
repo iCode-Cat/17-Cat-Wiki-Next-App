@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/CatwikiLogo.svg';
-import LogoLight from '../public/CatwikiLogoLight.svg';
+import LogoLight from '../public/Light.svg';
 import style from '../scss/Layout.module.scss';
 
 const layout = (props) => {

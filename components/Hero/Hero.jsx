@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import style from '../../scss/Hero.module.scss';
 import Image from 'next/image';
-import Logo from '../../public/CatwikilogoLight.svg';
+import Logo from '../../public/Light.svg';
 import Search from './Search';
 const Hero = () => {
   const [placeholder, setPlaceholder] = useState('Search');
