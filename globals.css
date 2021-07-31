@@ -20,6 +20,11 @@ img {
   width: 100%;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 #__next {
   display: grid;
   grid-template-columns: 1fr;
