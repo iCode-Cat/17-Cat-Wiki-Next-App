@@ -9,7 +9,9 @@ const layout = (props) => {
     <>
       <header className={style.header}>
         <Link href='/'>
-          <Image width='128px' src={Logo} alt='cat-wiki-logo' />
+          <a>
+            <Image width='128px' src={Logo} alt='cat-wiki-logo' />
+          </a>
         </Link>
       </header>
       {props.children}

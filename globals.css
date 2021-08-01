@@ -27,10 +27,16 @@ input {
 #__next {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0fr 0fr 1fr;
+  grid-template-rows: 0fr 0fr auto;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media (min-width: 50em) {
+  body {
+    padding: 2.6rem 9.6rem 0 9.6rem;
+  }
 }

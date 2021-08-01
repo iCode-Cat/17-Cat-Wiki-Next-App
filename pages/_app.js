@@ -1,9 +1,9 @@
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
-import { store } from '../redux/store';
-
+import store from '../redux/store';
 import '../globals.css';
+
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
@@ -14,7 +14,9 @@ function MyApp({ Component, pageProps }) {
           href='https://fonts.googleapis.com/icon?family=Material+Icons'
         />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </Layout>
   );
 }

@@ -1,18 +1,47 @@
 import classes from '../../scss/Search.module.scss';
-
-const Search = () => {
+import axios from 'axios';
+import { useRouter } from 'next/router';
+const Search = ({ popupToggle, dispatch, cats, setSearchWord, searchWord }) => {
+  const router = useRouter();
+  const updateSearchStat = async (id, slug) => {
+    try {
+      const post = await axios.post('http://localhost:3001/api/cats/stats', {
+        id,
+      });
+      router.push('/' + slug);
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
   return (
     <section className={classes.wrapper}>
-      <p className='material-icons'>close</p>
+      <p
+        onClick={() => dispatch(popupToggle())}
+        className={`material-icons ${classes.icon} `}
+      >
+        close
+      </p>
       <input
-        placeholder='Enter your breed'
+        onChange={(e) => setSearchWord(e.target.value)}
+        placeholder='Enter Your Breed'
         type='text'
         className={classes.input}
       />
       <div className={classes.result}>
-        <div className={classes.result_item}>
-          <h2>RESULT</h2>
-        </div>
+        {cats &&
+          cats
+            .filter((cat) =>
+              cat.name.toLowerCase().includes(searchWord.toLowerCase())
+            )
+            .map((cat) => (
+              <p
+                key={cat.id}
+                onClick={() => updateSearchStat(cat.name, cat.id)}
+                className={classes.result_item}
+              >
+                {cat.name}
+              </p>
+            ))}
       </div>
     </section>
   );
