@@ -10,7 +10,6 @@ const Hero = () => {
   const [searchWord, setSearchWord] = useState('');
   const state = useSelector((state) => state.search);
   const dispatch = useDispatch();
-
   const placeholderHandler = (e) => {
     const windowSize = window.innerWidth;
     if (windowSize < 800) {

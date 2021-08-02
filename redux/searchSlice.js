@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const fetchCatList = createAsyncThunk('/api/cats', async () => {
-  const response = await axios.get('http://localhost:3001/api/cats');
+  const response = await axios.get(`http://localhost:3001/api/cats`);
   return response.data;
 });
 

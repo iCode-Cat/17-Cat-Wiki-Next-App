@@ -18,7 +18,7 @@ const layout = (props) => {
       <footer className={style.footer}>
         <section className={style.wrapper}>
           <Image width='128px' src={LogoLight} alt='cat-wiki-logo' />
-          <p>© created by username</p>
+          <p>© created by iCode-Cat</p>
         </section>
       </footer>
     </>

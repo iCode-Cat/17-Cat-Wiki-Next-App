@@ -3,12 +3,12 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 const Search = ({ popupToggle, dispatch, cats, setSearchWord, searchWord }) => {
   const router = useRouter();
-  const updateSearchStat = async (id, slug) => {
+  const updateSearchStat = async (id) => {
     try {
-      const post = await axios.post('http://localhost:3001/api/cats/stats', {
+      const post = await axios.post(`http://localhost:3001/api/cats/stats`, {
         id,
       });
-      router.push('/' + slug);
+      router.push('/cats/' + id.toLowerCase().replace(/ /g, '_'));
     } catch (error) {
       console.log(error.response.data);
     }
@@ -36,7 +36,7 @@ const Search = ({ popupToggle, dispatch, cats, setSearchWord, searchWord }) => {
             .map((cat) => (
               <p
                 key={cat.id}
-                onClick={() => updateSearchStat(cat.name, cat.id)}
+                onClick={() => updateSearchStat(cat.name)}
                 className={classes.result_item}
               >
                 {cat.name}

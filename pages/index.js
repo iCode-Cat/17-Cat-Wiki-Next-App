@@ -1,6 +1,5 @@
 import Hero from '../components/Hero/Hero';
 import TopSearch from '../components/TopSearch';
-import { useSelector } from '@reduxjs/toolkit';
 
 export default function Home({ data }) {
   return (

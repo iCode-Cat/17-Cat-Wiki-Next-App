@@ -1,0 +1,72 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7rem 1.9rem;
+  -ms-grid-rows: (0fr)[3];
+      grid-template-rows: repeat(3, 0fr);
+  position: fixed;
+  height: 100vh;
+  background: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.wrapper .input {
+  min-width: 100%;
+  height: 45px !important;
+  border: solid #000 1px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.wrapper p {
+  cursor: pointer;
+  justify-self: flex-end;
+}
+
+.wrapper .result {
+  max-height: 300px;
+  overflow: auto;
+  margin-top: 150px;
+}
+
+.wrapper .result_item {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 1.9rem;
+  padding: 1.5rem 1.2rem;
+  border-radius: 12px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.wrapper .result_item:hover {
+  background: rgba(151, 151, 151, 0.1);
+}
+
+@media (min-width: 50em) {
+  .wrapper {
+    width: 394px;
+    position: absolute;
+    margin-top: 16px;
+    top: 100%;
+    height: 219px;
+    border-radius: 24px;
+  }
+  .wrapper .input {
+    display: none;
+  }
+  .wrapper .icon {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Search.module.css.map */

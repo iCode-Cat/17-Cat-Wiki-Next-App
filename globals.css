@@ -35,8 +35,15 @@ input {
   margin: 0 auto;
 }
 
+footer {
+  margin-top: 2.2rem;
+}
+
 @media (min-width: 50em) {
   body {
     padding: 2.6rem 9.6rem 0 9.6rem;
+  }
+  footer {
+    margin-top: 10rem;
   }
 }

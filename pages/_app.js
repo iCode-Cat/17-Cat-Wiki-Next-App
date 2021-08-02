@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 import '../globals.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, data }) {
   return (
     <Layout>
       <Head>
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <Component data={data} {...pageProps} />
       </Provider>
     </Layout>
   );

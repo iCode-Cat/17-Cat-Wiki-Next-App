@@ -1,0 +1,56 @@
+.header {
+  margin-bottom: 2.3rem;
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  justify-items: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 100%;
+  color: #FFF;
+}
+
+.footer .wrapper {
+  border-radius: 42px 42px 0 0;
+  padding: 3.4rem 2.9rem;
+  background: #000;
+  width: 100%;
+}
+
+.footer .wrapper p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2.1rem;
+}
+
+.footer .wrapper img {
+  width: 90px;
+}
+
+@media (min-width: 50em) {
+  .footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3.7rem 5.5rem;
+  }
+  .footer .wrapper img {
+    width: 127px;
+  }
+  .footer .wrapper p {
+    font-size: 1.8rem;
+  }
+}
+/*# sourceMappingURL=Layout.module.css.map */
