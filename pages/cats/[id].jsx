@@ -19,6 +19,7 @@ function Cat({ post }) {
         </div>
         <h1 className={classes.title}>{name}</h1>
         <p className={classes.desc}>{description}</p>
+        <p className={classes.title_2}>Other photos</p>
         <div className={classes.card}>
           {images.map((image) => (
             <Image
