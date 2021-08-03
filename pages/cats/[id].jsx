@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Image from 'next/image';
+import Skills from '../../components/Skills';
 import classes from '../../scss/Cat.module.scss';
 function Cat({ post }) {
   const { name, images, reference_image_id, description } = post[0];
@@ -10,8 +11,8 @@ function Cat({ post }) {
           <Image
             src={`https://cdn2.thecatapi.com/images/${reference_image_id}.jpg`}
             objectFit='cover'
-            width={150}
-            height={150}
+            width={120}
+            height={120}
             loading='eager'
             placeholder='blur'
             blurDataURL={`https://cdn2.thecatapi.com/images/${reference_image_id}.jpg`}
@@ -19,6 +20,10 @@ function Cat({ post }) {
         </div>
         <h1 className={classes.title}>{name}</h1>
         <p className={classes.desc}>{description}</p>
+        <Skills label='stamina' value={2} />
+        <Skills label='stamina' value={3} />
+        <Skills label='stamina' value={1} />
+        <Skills label='stamina' value={'Good'} />
         <p className={classes.title_2}>Other photos</p>
         <div className={classes.card}>
           {images.map((image) => (
