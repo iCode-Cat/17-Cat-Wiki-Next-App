@@ -1,38 +1,33 @@
 const Skills = ({ label, value }) => {
-  const object = [
-    {
-      placeholder: 'Temperament',
-      value: 'smart',
-    },
-    {
-      placeholder: 'Grooming:',
-      value: 1,
-    },
-    {
-      placeholder: 'Hunt',
-      value: 3,
-    },
-  ];
-
   const array = Array.from(Array(5).keys());
-  console.log(array);
-
   return (
-    <div style={{ display: 'grid', gridAutoFlow: 'column', gap: '5px' }}>
-      <span>{label}:</span>
+    <div
+      style={{
+        display: 'grid',
+
+        gridTemplateColumns: '140px auto',
+        gridAutoFlow: 'column',
+        gap: '5px',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+      }}
+    >
+      <p style={{ fontSize: '1.4rem', fontWeight: '700' }}>{label}:</p>
       {typeof value === 'number' ? (
         array.map((arr, index) => (
           <div
+            key={index}
             style={{
-              display: 'inline-block',
-              background: index < value ? 'red' : 'gray',
-              width: '20px',
-              height: '20px',
+              textAlign: 'left',
+              background: index < value ? '#544439' : '#E0E0E0',
+              width: '30px',
+              height: '8px',
+              borderRadius: '8px',
             }}
           ></div>
         ))
       ) : (
-        <span>{value}</span>
+        <p style={{ fontSize: '1.4rem', fontWeight: '500' }}>{value}</p>
       )}
     </div>
   );

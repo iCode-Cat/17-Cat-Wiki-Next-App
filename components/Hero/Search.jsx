@@ -5,10 +5,14 @@ const Search = ({ popupToggle, dispatch, cats, setSearchWord, searchWord }) => {
   const router = useRouter();
   const updateSearchStat = async (id) => {
     try {
-      const post = await axios.post(`http://localhost:3001/api/cats/stats`, {
-        id,
-      });
+      const post = await axios.post(
+        `https://cat-wiki-apiv2.herokuapp.com/api/cats/stats`,
+        {
+          id,
+        }
+      );
       router.push('/cats/' + id.toLowerCase().replace(/ /g, '_'));
+      dispatch(popupToggle());
     } catch (error) {
       console.log(error.response.data);
     }

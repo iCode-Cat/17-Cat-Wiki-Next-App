@@ -13,7 +13,9 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3001/api/cats/stats`);
+  const res = await fetch(
+    `https://cat-wiki-apiv2.herokuapp.com/api/cats/stats`
+  );
   const data = await res.json();
   if (!data) {
     return {
