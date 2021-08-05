@@ -59,6 +59,7 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  justify-self: flex-end;
 }
 
 .wrapper .gallery .image_container:nth-child(2) {
