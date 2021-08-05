@@ -79,6 +79,7 @@ function Cat({ post }) {
             loading='eager'
             placeholder='blur'
             blurDataURL={`https://cdn2.thecatapi.com/images/${reference_image_id}.jpg`}
+            alt='image-cat'
           />
         </div>
         <h1 className={classes.title}>{name}</h1>
@@ -100,6 +101,7 @@ function Cat({ post }) {
               loading='eager'
               placeholder='blur'
               blurDataURL={image.url}
+              alt='image-cat'
             />
           ))}
         </div>

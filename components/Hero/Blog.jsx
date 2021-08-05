@@ -14,9 +14,27 @@ const Blog = () => {
         <div className={classes.redirect}>READ MORE...</div>
       </section>
       <section className={classes.gallery}>
-        <img className={classes.image_container} src='/image2.png' />
-        <img className={classes.image_container} src='/image3.png' />
-        <img className={classes.image_container} src='/image1.png' />
+        <span className={classes.image_container}>
+          <Image width={273} height={167} alt='cat-img' src='/image2.png' />
+        </span>
+        <span className={classes.image_container}>
+          <Image
+            width={238}
+            height={385}
+            alt='cat-img'
+            className={classes.image_container}
+            src='/image3.png'
+          />
+        </span>
+        <span className={classes.image_container}>
+          <Image
+            width={195}
+            height={293}
+            alt='cat-img'
+            className={classes.image_container}
+            src='/image1.png'
+          />
+        </span>
       </section>
     </article>
   );

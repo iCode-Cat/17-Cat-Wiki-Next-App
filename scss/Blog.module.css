@@ -1,0 +1,120 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  margin-top: 6.3rem;
+}
+
+.wrapper p {
+  color: #291507;
+}
+
+.wrapper .title {
+  font-size: 4rem;
+  font-weight: 700;
+  max-width: 325px;
+  margin-top: 1.6rem;
+}
+
+.wrapper .description {
+  font-size: 1.8rem;
+  margin-top: 4.2rem;
+}
+
+.wrapper .redirect {
+  margin-top: 2.6rem;
+  margin-bottom: 6.3rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgba(39, 20, 7, 0.603);
+}
+
+.wrapper .shape {
+  width: 60px;
+  height: 3.5px;
+  background: #4d270c;
+  border-radius: 77px;
+}
+
+.wrapper .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 18px;
+}
+
+.wrapper .gallery .image_container {
+  border-radius: 24px;
+}
+
+.wrapper .gallery .image_container:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.wrapper .gallery .image_container:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  width: calc(100% - 15px);
+}
+
+.wrapper .gallery .image_container:nth-child(3) {
+  max-width: 75%;
+  justify-self: flex-end;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+@media (min-width: 81em) {
+  .wrapper {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10.8rem;
+    margin-top: unset;
+    margin-bottom: -6.3rem;
+  }
+  .wrapper .shape {
+    margin-top: 8rem;
+  }
+  .wrapper .redirect {
+    font-size: 1.8rem;
+    margin-top: 4.3rem;
+  }
+  .wrapper .title {
+    margin-top: 2rem;
+  }
+  .wrapper .description {
+    max-width: 392px;
+  }
+  .wrapper .gallery {
+    width: 539px;
+    gap: 30px;
+  }
+  .wrapper .gallery .image_container:nth-child(2) {
+    width: unset;
+  }
+}
+/*# sourceMappingURL=Blog.module.css.map */

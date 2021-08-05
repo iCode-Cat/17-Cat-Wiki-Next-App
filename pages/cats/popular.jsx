@@ -15,7 +15,6 @@ const popular = ({ data }) => {
                 loading='lazy'
                 layout='fixed'
                 objectFit='cover'
-                quality={100}
                 width={170}
                 height={170}
                 alt={cat.name}

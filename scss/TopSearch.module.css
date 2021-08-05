@@ -32,8 +32,10 @@
 
 .wrapper .navigate {
   justify-self: flex-end;
+  font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
+  color: rgba(39, 20, 7, 0.603);
 }
 
 .wrapper .images {
@@ -78,6 +80,9 @@
   .wrapper .desc {
     font-size: 4.8rem;
     width: 536px;
+  }
+  .wrapper .navigate {
+    font-size: 1.8rem;
   }
   .wrapper figcaption {
     font-size: 1.8rem;

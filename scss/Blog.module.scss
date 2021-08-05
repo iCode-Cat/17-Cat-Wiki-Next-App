@@ -80,6 +80,9 @@
     .gallery {
       width: 539px;
       gap: 30px;
+      .image_container:nth-child(2) {
+        width: unset;
+      }
     }
   }
 }
