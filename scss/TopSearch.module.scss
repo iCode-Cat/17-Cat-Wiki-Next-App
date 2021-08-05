@@ -20,8 +20,10 @@
   }
   .navigate {
     justify-self: flex-end;
+    font-weight: 700;
     font-size: 1.2rem;
     cursor: pointer;
+    color: hsla(25, 71%, 9%, 0.603);
   }
 
   .images {
@@ -56,6 +58,9 @@
     .desc {
       font-size: 4.8rem;
       width: 536px;
+    }
+    .navigate {
+      font-size: 1.8rem;
     }
     figcaption {
       font-size: 1.8rem;

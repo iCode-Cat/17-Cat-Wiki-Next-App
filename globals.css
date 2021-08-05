@@ -44,6 +44,6 @@ footer {
     padding: 2.6rem 9.6rem 0 9.6rem;
   }
   footer {
-    margin-top: 10rem;
+    margin-top: unset;
   }
 }

@@ -10,7 +10,7 @@ const TopSearch = ({ topSearchs }) => {
         onClick={() => router.push('/cats/popular')}
         className={classes.navigate}
       >
-        SEE MORE
+        SEE MORE...
       </p>
       <div className={classes.images}>
         {topSearchs.slice(0, 4).map((item) => (
