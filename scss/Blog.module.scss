@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 6.3rem;
+
   p {
     color: #291507;
   }
@@ -62,6 +63,7 @@
     align-items: center;
     padding: 10.8rem;
     margin-top: unset;
+    margin-bottom: -6.3rem;
     .shape {
       margin-top: 8rem;
     }
