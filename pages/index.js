@@ -1,3 +1,4 @@
+import Blog from '../components/Hero/Blog';
 import Hero from '../components/Hero/Hero';
 import TopSearch from '../components/TopSearch';
 
@@ -7,6 +8,7 @@ export default function Home({ data }) {
       <article className='article'>
         <Hero />
         <TopSearch topSearchs={data} />
+        <Blog />
       </article>
     </main>
   );

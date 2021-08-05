@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+
+  .img1 {
+    width: 400px !important;
+    grid-column: 1/3 !important;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    background: red;
+  }
+}
