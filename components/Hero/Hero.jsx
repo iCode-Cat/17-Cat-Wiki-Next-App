@@ -7,6 +7,7 @@ import Logo from '../../public/Light.svg';
 import Search from './Search';
 const Hero = () => {
   const [placeholder, setPlaceholder] = useState('Search');
+  const [isMobile, setIsMobile] = useState(false);
   const [searchWord, setSearchWord] = useState('');
   const state = useSelector((state) => state.search);
   const dispatch = useDispatch();
@@ -14,8 +15,10 @@ const Hero = () => {
     const windowSize = window.innerWidth;
     if (windowSize < 800) {
       setPlaceholder('Search');
+      setIsMobile(true);
       return;
     }
+    setIsMobile(false);
     setPlaceholder('Enter Your Breed');
   };
 
@@ -39,6 +42,7 @@ const Hero = () => {
       <p className={style.description}>Get to know more about your cat breed</p>
       <div className={style.search}>
         <input
+          onKeyPress={(e) => isMobile && e.preventDefault()}
           onChange={(e) => setSearchWord(e.target.value)}
           onClick={() => {
             dispatch(popupToggle());

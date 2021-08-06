@@ -115,7 +115,6 @@ export async function getStaticPaths() {
   // Call an external API endpoint to get posts
   const res = await fetch('https://cat-wiki-apiv2.herokuapp.com/api/cats');
   const posts = await res.json();
-  console.log(posts);
   // Get the paths we want to pre-render based on posts
   const paths = posts.map((post) => ({
     params: {
