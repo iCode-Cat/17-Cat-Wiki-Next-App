@@ -42,7 +42,7 @@ const Hero = () => {
       <p className={style.description}>Get to know more about your cat breed</p>
       <div className={style.search}>
         <input
-          onKeyPress={(e) => isMobile && e.preventDefault()}
+          readOnly={isMobile && true}
           onChange={(e) => setSearchWord(e.target.value)}
           onClick={() => {
             dispatch(popupToggle());
@@ -50,6 +50,7 @@ const Hero = () => {
           placeholder={placeholder}
           type='text'
         />
+
         <span className='material-icons'>search</span>
         {state.popup && (
           <Search
